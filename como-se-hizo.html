@@ -70,22 +70,22 @@
 									<div class="row features">
 										<section class="7u feature">
 										
-											<p>Para empezar a contruir a Blitzcrank03 comenzaremos por la esencia del robot, es decir, los circuitos. </p>
-											<p>Hemos montado dos circuitos con los chips 555 para generar la señal PWM de los motores, y otros dos circuitos para que los sensores
+											<p style="text-align:justify;">Para empezar a construir a Blitzcrank03 comenzaremos por la esencia del robot, es decir, los circuitos. </p>
+											<p style="text-align:justify;">Hemos montado dos circuitos con los chips 555 para generar la señal PWM de los motores, y otros dos circuitos para que los sensores
 											CNY50, cuando detecten negro, obtengamos un voltaje de salida de 5V. Al detectar el color negro con 5V condiciona a 
 											que los sensores tengan que estar pegados, ya que cualquier color que no sea negro emitirá un valor cercano a los 0V, en nuestro caso 1.2V
 											aproximadamente.</p>
-											<p>No obstante para obtener un valor lógico correcto (0V), hemos negado la señal a través del inversor para que nos de un valor lógico correcto.
+											<p style="text-align:justify;">No obstante para obtener un valor lógico correcto (0V), hemos negado la señal a través del inversor para que nos de un valor lógico correcto.
 											Sin embargo, dicho valor estará negado, por lo que hay que negarlo otra vez para obtener primer valor lógico que teníamos, pero con un voltaje
 											adecuado para que el circuito de la NAND pueda reconocerlo.</p>
-											<p>Una vez hemos montado ambos circuitos, hay que implementar la lógica para que los motores funcionen correctamente. Por ejemplo, si el 
+											<p style="text-align:justify;">Una vez hemos montado ambos circuitos, hay que implementar la lógica para que los motores funcionen correctamente. Por ejemplo, si el 
 											sensor de la izquierda comienza a detectar blanco, quiere decir que hay una curva hacia la derecha. Lo que tenemos que hacer aqui es que
 											el motor de la izquierda pare y el de la derecha continúe para realizar el giro. Por lo que tenemos que hacer la siguiente ecuación lógica:
 											<br>
 											</p>Señal del motor derecho = (Sensor izquierdo) NAND (Señal PWM)</p>
 											</p>Señal del motor derecho = (Sensor izquierdo) NAND (Señal PWM)</p>
 											
-											<p> La última cosa a tener en cuenta es que hay que negar una de las señales PWM para que vayan los motores en el mismo sentido</p>
+											<p style="text-align:justify;"> La última cosa a tener en cuenta es que hay que negar una de las señales PWM para que vayan los motores en el mismo sentido</p>
 										</section>
 										<section class="5u feature">
 											<img src="images/sensores.jpg" alt="" class="image full"/>
