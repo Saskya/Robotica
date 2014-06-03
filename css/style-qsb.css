@@ -1,0 +1,19 @@
+/*
+	CSS for quien-es-blitzcrank.html
+*/
+
+p{
+	font-size: 0.8em;
+}
+
+.image.full2{
+	display: block;
+	width: 100%;
+	margin: 0 0 0.5em 0;
+}
+
+.image.full3{
+	display: block;
+	width: 100%;
+	margin: 0 0 1em 0;
+}
