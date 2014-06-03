@@ -120,7 +120,7 @@
 
 	.feature
 	{
-		text-align: center;
+		text-align: justify;
 	}
 	
 	/* Sections/Articles */
@@ -1111,3 +1111,5 @@
 		border-top: solid 1px #d2d7dc;
 		color: #a2a7ac;
 	}
+	
+	

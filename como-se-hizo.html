@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Telephasic by HTML5 UP</title>
+		<title>Blitzcrank03 - ¿Cómo se hizo?</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -38,10 +38,16 @@
 							<nav id="nav">
 								<ul>
 									<li><a href="quien-es-blitzcrank.html">¿Quién es Blitzcrank?</a></li>
-									<li class="break"><a href="como-se-hizo.html">¿Cómo se hizo?</a></li>
+									<li class="break">
+										<a href="como-se-hizo.html">¿Cómo se hizo?</a>
+										<ul>
+											<li><a href="como-se-hizo.html#circuito">El circuito</a></li>
+											<li><a href="como-se-hizo.html#estructura">La estructura</a></li>
+											<li><a href="como-se-hizo.html#carcasa">La carcasa</a></li>
+										</ul>
+									</li>
 								</ul>
 							</nav>
-
 					</div>
 
 			</div>
@@ -56,138 +62,109 @@
 							<!-- Content -->
 								<article id="content">
 									<header>
-										<h2>No Sidebar</h2>
-										<span>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
-										dolor neque semper.</span>
+										<span>¿Quieres saber todos los pasos que hemos seguido para montar a Bliztcrank03? En ésta página describiremos cómo hemos hecho 
+										tanto el circuito electrónico como la carcasa que protege al circuito.</span>
+										<h2 id="circuito">El circuito</h2>
 									</header>
-									<a href="http://ineedchemicalx.deviantart.com/art/Pasadena-357650036" class="image full"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Ut sed tortor luctus, gravida nibh eget, volutpat odio. Proin rhoncus, sapien 
-									mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum 
-									condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus 
-									ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque 
-									eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et 
-									turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius. 
-									Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
-									<p>Mauris eleifend eleifend felis aliquet ornare. Vestibulum porta velit at elementum
-									gravida nibh eget, volutpat odio. Proin rhoncus, sapien 
-									mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum 
-									condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus 
-									ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque 
-									eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et 
-									turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius. 
-									Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
-									<p>Vestibulum pellentesque posuere lorem non aliquam. Mauris eleifend eleifend 
-									felis aliquet ornare. Vestibulum porta velit at elementum elementum.</p>
+																		
+									<div class="row features">
+										<section class="7u feature">
+										
+											<p>Para empezar a contruir a Blitzcrank03 comenzaremos por la esencia del robot, es decir, los circuitos. </p>
+											<p>Hemos montado dos circuitos con los chips 555 para generar la señal PWM de los motores, y otros dos circuitos para que los sensores
+											CNY50 cuando detecte negro obtengamos un voltaje de salida de 5V. Al detectar el color negro con 5V condiciona a 
+											que los sensores tengan que estar pegados, ya que cualquier color que no sea negro emitirá un valor cercano a los 0V, en nuestro caso 1.2V
+											aproximadamente.</p>
+											<p>No obstante para obtener un valor lógico correcto (0V), hemos negado la señal a través del inversor para que nos de un valor lógico correcto.
+											Sin embargo, dicho valor estará negado por lo que hay que negarlo otra vez para obtener primer valor lógico que teníamos pero con un voltaje
+											adecuado para que el circuito de la NAND pueda reconocerlo.</p>
+											<p>Una vez hemos montado ambos circuitos, hay que implementar la lógica para que los motores funcionen correctamente. Por ejemplo, si el 
+											sensor de la izquierda comienza a detectar blanco, quiere decir que hay una curva hacia la derecha. Lo que tenemos que hacer aqui es que
+											el motor de la izquierda pare y el de la derecha continue para realizar el giro. Por lo que tenemos que hacer la siguiente ecuación lógica:
+											<br>
+											</p>Señal del motor derecho = (Sensor izquierdo) NAND (Señal PWM)</p>
+											</p>Señal del motor derecho = (Sensor izquierdo) NAND (Señal PWM)</p>
+											
+											<p> La última cosa a tener en cuenta es que hay que negar una de las señales PWM para que vayan los motores en el mismo sentido</p>
+										</section>
+										<section class="5u feature">
+											<img src="images/sensores.jpg" alt="" class="image full"/>
+											<img src="images/circuito.jpg" alt="" class="image full"/>
+										</section>
+									</div>
 								</article>
-
+								<hr>
+								<article id="content">
+									<header>
+										<h2 id="estructura">La estructura</h2>
+										<span>Este apartado es importante ya que la estructura que montemos para el robot condicionará la carcasa. Aquí os dejamos una explicación
+										sobre cómo hemos montado la estructura.</span>
+									</header>
+																		
+									<div class="row features">
+										<section class="5u feature">
+											<img src="images/sensores2.jpg" alt="" class="image full"/>
+											<img src="images/tornillos.jpg" alt="" class="image full"/>
+											<img src="images/rueda.jpg" alt="" class="image full"/>
+										</section>
+										<section class="7u feature">
+											<p>La estrucutura de nuestro robot está hecha por tres piezas de madera. Una pieza a la cual está sujeta el circuito. Otra pieza
+											donde está atornillada la rueda loca y la otra pieza que se encargan de sujetar los motores. La base del circuito está pegada con
+											unas tiras de velcro para que pueda se fácilmente desmontable la madera a la que está acoplada el circuito.</p>
+											
+											<p>Para las ruedas de los motores hemos utilizado ruedas de un juego de construcciones llamado Kenex donde proporcionaban muchos tipos de 
+											ruedas entre las cuales se encuentran las que estamos utilizando. Las ruedas las hemos sujetado mediante un tornillo al motor y para que 
+											no patinase la rueda enganchamos dos clavos a las aspas que nos eran proporcionados con los motores y de esta forma la rueda era capaz de 
+											girar.</p>
+											
+											<p>Para la colocación de los sensores hemos utilizado el plástico de un mechero de manera que por cada hueco del mechero hemos introducido un 
+											sensor. Para regular la altura de dicho plastico lleva un velcro acoplado a la parte trasera de manera que se pueda cambiar la altura fácilmente.
+											</p>
+											
+											</p>En cuanto a la sujección de los motores el trozo de madera descrito anteriormente lleva cuatro tornillos los cuales sujetan los motores a la
+											base de la estructura.											
+											</p>
+											
+											</p>Para conectar la alimentación de los 5V y de GND al circuito se han utilizado dos cables. Dichos cables tienen en uno de sus extremos unos jumpers
+											para que sea fácil quitar y poner la alimentación y el GND del circuito una vez introducido dentro de la carcasa.
+											<p>
+											
+											<br>
+											
+										</section>
+									</div>
+								</article>
+								<hr>
+								<article id="content">
+									<header>
+										<h2 id="carcasa">La carcasa</h2>
+										<span>La estrucutra y circuito están bien... pero hay que darle un toque artístico al Blizcrank03. Aquí te contamos como hacerlo</span>
+									</header>
+																		
+									<div class="row features">
+										<section class="8u feature">
+											<p>Primero hay que hacer una base de carton la cual le dará la forma más básica a nuestro robot. Para los brazos hemos reutilizado
+											unos tubos de desagües.Para la cabeza hemos hecho una bola de papel.</p>
+											<p>Hay mediante mas papel de periódico y cartulina creamos los detalles del robot y cuando lo tengamos hacemos una mezcla de cola blanca
+											con agua y la aplicamos sobre el robot, ponemos papel de periódico y con esto tendremos un robotmuy resistente dentro de un par días.</p>
+											<p>Le hacemos unos huecos en los laterales y creamos una puerta en la parte de detras para poder introducir la estructura del robot
+											y ya lo tendremos montado.</p>
+										</section>
+										<section class="3u feature">
+											<img src="images/base.jpg" alt="" class="image full"/>
+											<img src="images/papel.jpg" alt="" class="image full"/>
+										</section>
+									</div>
+									
+									<p>Finalmente pintamos el roboto y con esto hemos contrudio nuestra carcasa.</p>
+									<img src="images/blitzcrank3.jpg" alt="" class="image full"/>
+								</article>
+								
+								
 						</div>
-					</div>
-					<div class="row features">
-						<section class="4u feature">
-							<div class="image-wrapper first">
-								<a href="http://ineedchemicalx.deviantart.com/art/Time-goes-by-too-fast-335982438" class="image full"><img src="images/pic03.jpg" alt="" /></a>
-							</div>
-							<header>
-								<h3>Dolor sit consequat magna</h3>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur 
-							vel sem sit dolor neque semper magna lorem ipsum.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Elevate my awareness</a></li>
-							</ul>
-						</section>
-						<section class="4u feature">
-							<div class="image-wrapper">
-								<a href="http://ineedchemicalx.deviantart.com/art/Kingdom-of-the-Wind-348268044" class="image full"><img src="images/pic04.jpg" alt="" /></a>
-							</div>
-							<header>
-								<h3>Dolor sit consequat magna</h3>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur 
-							vel sem sit dolor neque semper magna lorem ipsum.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Elevate my awareness</a></li>
-							</ul>
-						</section>
-						<section class="4u feature">
-							<div class="image-wrapper">
-								<a href="http://ineedchemicalx.deviantart.com/art/Elysium-355393900" class="image full"><img src="images/pic05.jpg" alt="" /></a>
-							</div>
-							<header>
-								<h3>Dolor sit consequat magna</h3>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur 
-							vel sem sit dolor neque semper magna lorem ipsum.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Elevate my awareness</a></li>
-							</ul>
-						</section>
 					</div>
 				</div>
-			</div>
-
-		<!-- Footer Wrapper -->
-			<div id="footer-wrapper">
-
-				<!-- Footer -->
-					<div id="footer" class="container">
-						<header class="major">
-							<h2>Euismod aliquam vehicula lorem</h2>
-							<span>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit<br />
-							dolor neque semper magna lorem ipsum feugiat veroeros lorem ipsum dolore.</span>
-						</header>
-						<div class="row">
-							<section class="6u">
-								<form method="post" action="#">
-									<div class="row half">
-										<div class="6u">
-											<input name="name" placeholder="Name" type="text" class="text" />
-										</div>
-										<div class="6u">
-											<input name="email" placeholder="Email" type="text" class="text" />
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<textarea name="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="12u">
-											<ul class="actions">
-												<li><a href="#" class="button">Send Message</a></li>
-												<li><a href="#" class="button">Clear Form</a></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-							<section class="6u">
-								<div class="row no-collapse-1">
-									<ul class="divided icons 6u">
-										<li class="fa fa-twitter"><a href="#"><span class="extra">twitter.com/</span>untitled</a></li>
-										<li class="fa fa-facebook"><a href="#"><span class="extra">facebook.com/</span>untitled</a></li>
-										<li class="fa fa-dribbble"><a href="#"><span class="extra">dribbble.com/</span>untitled</a></li>
-									</ul>
-									<ul class="divided icons 6u">
-										<li class="fa fa-linkedin"><a href="#"><span class="extra">linkedin.com/</span>untitled</a></li>
-										<li class="fa fa-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
-										<li class="fa fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
-									</ul>
-								</div>
-							</section>
-						</div>
-					</div>
-
-				<!-- Copyright -->
-					<div id="copyright" class="container">
-						<ul class="menu">
-							<li>&copy; Untitled. All rights reserved.</li>
-							<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
-						</ul>
-					</div>
-
-			</div>
+			</div>				
 
 	</body>
 </html>
